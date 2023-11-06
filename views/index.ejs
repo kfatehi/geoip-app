@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+  /* Respect the user's system settings for light or dark mode */
+  :root {
+    color-scheme: light dark;
+  }
+
+  /* Light theme styles */
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .flag {
+      height: 50px;
+    }
+  }
+
+  /* Dark theme styles */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212;
+      color: #ccc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #242424;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(255,255,255,0.1);
+      border-radius: 8px;
+    }
+
+    .flag {
+      height: 50px;
+    }
+  }
+</style>
+
+</head>
+<body>
+<div class="container">
+  
+  <h1><%= flag %> Your IP Address</h1>
+  <div id="ip-info">
+    
+    <strong><%= clientAddr %></strong>
+  </div>
+  
+  <h1>Geolocation:</h1>
+  <pre id="geo-info-client"><%= JSON.stringify(clientGeo, null, 4) %></pre>  
+</div>
+<script>
+ 
+</script>
+</body>
+</html>
