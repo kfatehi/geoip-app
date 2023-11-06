@@ -6,15 +6,19 @@ docker compose up -d
 
 Setup within caddy like so:
 
+```
 geo.example.com {
-  import hub.caddy
+  reverse_proxy http://localhost:3000
 }   
+```
 
 or, without a domain or HTTPS, like so:
 
+```
 :80 {
-  import hub.caddy
+  reverse_proxy http://localhost:3000
 }
+```
 
 Keep it updated with:
 
